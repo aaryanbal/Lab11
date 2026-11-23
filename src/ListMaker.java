@@ -11,7 +11,7 @@ public class ListMaker
     public static void main(String[] args)
     {
         String menuPrompt = "A - Add   I - Insert  D - Delete  V - View  Q - Quit";
-        String cmd = ""; // A D V or Q
+        String cmd = "";
 
         boolean done = false;
         boolean confirmQuit = false;
