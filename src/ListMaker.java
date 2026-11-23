@@ -18,14 +18,10 @@ public class ListMaker
 
         do {
 
-            // display the current list
             displayList();
-            //
-            // get a cmd from the user display the cmd menu in the input prompt
             cmd = SafeInput.getRegExString(in, menuPrompt, "[AaIiDdVvQq]");
 
             cmd = cmd.toUpperCase();
-            // execute it
 
             switch (cmd)
             {
@@ -58,9 +54,7 @@ public class ListMaker
     {
         int insertIndex = 0;
 
-        // get an item number for the item to be inserted
         insertIndex = SafeInput.getRangedInt(in, "Enter the number for the insertion", 1, lines.size() + 1);
-        // convert the item to an index --
         insertIndex = insertIndex - 1;
 
         line = SafeInput.getNonZeroLengthString(in, "Enter the new item to add to the list");
@@ -80,9 +74,7 @@ public class ListMaker
     {
         int itemToDelete = 0;
 
-        // get an item number for the item to delete from the user
         itemToDelete = SafeInput.getRangedInt(in, "Enter the number of the item to delete", 1, lines.size());
-        // convert the item to an index --
         itemToDelete = itemToDelete - 1;
         lines.remove(itemToDelete);
     }
